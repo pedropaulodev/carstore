@@ -58,8 +58,9 @@ public class CarDao {
             while (resultSet.next()) {
 
                 String carName = resultSet.getString("name");
+                int carId = resultSet.getInt("id");
 
-                Car car = new Car(carName);
+                Car car = new Car(carName, carId);
 
                 cars.add(car);
 
